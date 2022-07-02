@@ -1,5 +1,6 @@
 import { css, defineStyle } from 'src/utils/css';
 import { h } from 'src/utils/h';
+import { Block } from './Block';
 
 const style = defineStyle(css`
   color: red;
@@ -13,11 +14,11 @@ const style2 = defineStyle(css`
 
 export const GuiBlock = (props: Partial<JSX.Attributes> = {}) => {
 	return (
-		<div className={props.className}>
-			<div className={style.cn}>children 1</div>
-			<div className={style2.cn}>children 2</div>
-			<div>children 3</div>
-		</div>
+		<Block className={props.className}>
+			<Block className={style.cn}>children 1</Block>
+			<Block className={style2.cn}>children 2</Block>
+			<Block>children 3</Block>
+		</Block>
 	);
 };
 
